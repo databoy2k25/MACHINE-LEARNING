@@ -1,0 +1,71 @@
+# Customer Churn Prediction Project
+
+This repository contains a project focused on predicting customer churn using machine learning and deep learning techniques. The objective is to identify customers likely to leave a service, enabling proactive retention strategies.
+
+## Project Overview
+
+This project involves analyzing customer data, processing it, and building predictive models. Key steps include data preprocessing, feature engineering, exploratory data analysis (EDA), and model evaluation using metrics like accuracy, precision, and recall.
+
+## Workflow
+
+1. **Setup and Libraries**:
+   - Installed `NumPy`, `FuzzyTM`, and `Blocks`.
+   - Upgraded `NumPy` to resolve compatibility issues.
+   - Imported libraries: `Pandas`, `Matplotlib`, and `NumPy`.
+
+2. **Data Preprocessing**:
+   - Imported the dataset and dropped unnecessary columns.
+   - Converted columns to numeric using `pd.to_numeric`, fixing blank space issues with `isnull`.
+   - Replaced "no internet service" and "no phone service" with "no."
+   - Transformed categorical data ("yes/no") into binary values (`1/0`) and applied one-hot encoding.
+   - Scaled numerical columns such as `tenure`, `monthly charges`, and `total charges`.
+
+3. **Visualization**:
+   - **Histogram**:
+     - **X-axis**: Tenure
+     - **Y-axis**: Number of customers
+     - **Title**: "Customer Joint Prediction Visualization"
+   - **Heatmap**: Visualized the confusion matrix for model performance.
+   - **Classification Report**: Presented precision, recall, and F1-score for each class.
+   - **Confusion Matrix**: Displayed the counts of true positives, false positives, true negatives, and false negatives.
+
+4. **Model Building**:
+   - Split the data into training and testing sets.
+   - Built an Artificial Neural Network (ANN) using **TensorFlow** and **Keras**.
+   - Trained, evaluated, and predicted using the ANN model.
+
+5. **Evaluation**:
+   - Evaluated the model using accuracy, precision, recall, and confusion matrix.
+   - Generated a classification report with the following metrics:
+     - **Accuracy**: `0.77`
+     - **Precision (Class 0)**: `0.81`
+     - **Precision (Class 1)**: `0.64`
+     - **Recall (Class 0)**: `0.86`
+     - **Recall (Class 1)**: `0.56`
+
+## Tools & Technologies
+
+- **Programming**: Python
+- **Libraries**: TensorFlow, Keras, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, FuzzyTM
+- **Visualization**: Histograms, Heatmaps, Classification Reports, and Confusion Matrix
+
+## Results
+
+The model achieved a prediction accuracy of `77%`, with strong performance in classifying non-churn customers (class 0). There is room for improvement in predicting churn customers (class 1), which could be addressed with more advanced techniques or additional data.
+
+## File Structure
+
+- `notebooks/`: Jupyter notebooks for data preprocessing, EDA, and modeling.
+- `data/`: Dataset used for training and testing.
+- `models/`: Saved trained models for easy deployment.
+- `results/`: Visualizations, classification reports, and evaluation metrics.
+
+## Future Improvements
+
+- Integration of additional features and external datasets to improve performance.
+- Exploration of advanced deep learning models for better churn prediction.
+- Deployment of the model on a cloud platform for real-time predictions.
+
+---
+
+Feel free to explore the repository, and your feedback is highly appreciated!
