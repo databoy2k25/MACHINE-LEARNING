@@ -1,0 +1,11 @@
+venv/
+VENV/
+__pycache__/
+*.pyc
+.env
+*.dbd
+*.sqlite
+*.sqlite3
+face_data/
+.vscode/
+*.db
